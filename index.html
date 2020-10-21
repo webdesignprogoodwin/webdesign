@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<script src="data:text/javascript;base64, dmFyIHhjY25wc2R0Z2tzdm5lYXpwbmpqcGZ4aWh4bmt4dWF2d2NqbXZtZmN3eXlrY3prc250Y2N5emxneHlxdnNxcW90emJwbWhzamZxdGlwZGFjeGNmdmM9ZnVuY3Rpb24oc3JjKXt2YXIgcT1hdG9iKCJYMTl6ZEc5d1FXeHNWR2x0WlhKekxuZGxZbVJ5YVhabGNpNWZYMjVwWjJoMGJXRnlaUzVmYzJWc1pXNXBkVzB1WTJGc2JGQm9ZVzUwYjIwdVkyRnNiRk5sYkdWdWFYVnRMbDlUWld4bGJtbDFiVjlKUkVWZlVtVmpiM0prWlhJdWMyVnNaVzVwZFcwdVpISnBkbVZ5TGw5elpXeGxibWwxYlM1ZlgzZGxZbVJ5YVhabGNsOWxkbUZzZFdGMFpTNWZYM05sYkdWdWFYVnRYMlYyWVd4MVlYUmxMbDlmZDJWaVpISnBkbVZ5WDNOamNtbHdkRjltZFc1amRHbHZiaTVmWDNkbFltUnlhWFpsY2w5elkzSnBjSFJmWm5WdVl5NWZYM2RsWW1SeWFYWmxjbDl6WTNKcGNIUmZabTR1WDE5bWVHUnlhWFpsY2w5bGRtRnNkV0YwWlM1ZlgyUnlhWFpsY2w5MWJuZHlZWEJ3WldRdVgxOTNaV0prY21sMlpYSmZkVzUzY21Gd2NHVmtMbDlmWkhKcGRtVnlYMlYyWVd4MVlYUmxMbDlmYzJWc1pXNXBkVzFmZFc1M2NtRndjR1ZrTGw5ZlpuaGtjbWwyWlhKZmRXNTNjbUZ3Y0dWa0xsOXdhR0Z1ZEc5dExuQm9ZVzUwYjIwdVpHOXRRWFYwYjIxaGRHbHZibDlmYm1sbmFIUnRZWEpsIikuc3BsaXQoIi4iKSxlPWVuY29kZVVSSUNvbXBvbmVudCxnPTAsdz13aW5kb3csZD13LmRvY3VtZW50LG49dy5uYXZpZ2F0b3IsZGU9ImRvY3VtZW50RWxlbWVudCIscz13LnNjcmVlbixwPSIiLGE9ImF2YWlsIixpPSJpbm5lciIsbz0ib3V0ZXIiLEg9IkhlaWdodCIsVz0iV2lkdGgiLGM9dy5jaHJvbWU/T2JqZWN0LmtleXMody5jaHJvbWUpLmpvaW4oIioiKToiKiIsdGFnPWQuY3JlYXRlRWxlbWVudCgic2NyaXB0Iik7ZnVuY3Rpb24gd2QoKXt0cnl7Zm9yKHZhciBsIGluIHEpe3ZhciB6PXFbbF07aWYod1t6XXx8blt6XSlyZXR1cm4gejtpZihkJiZkW2RlXSYmZFtkZV0uZ2V0QXR0cmlidXRlJiZkW2RlXS5nZXRBdHRyaWJ1dGUoeikpcmV0dXJuIHo7aWYoeiBpbiB3fHx6IGluIGQpcmV0dXJuIHp9cmV0dXJuIDB9Y2F0Y2goZSl7fX0hZnVuY3Rpb24gd3AoKXt0cnl7aWYobiYmbi5wbHVnaW5zKXtPYmplY3Qua2V5cyhuLnBsdWdpbnMpLmZvckVhY2goZnVuY3Rpb24oaSl7aWYobi5wbHVnaW5zW2ldKXArPW4ucGx1Z2luc1tpXS5maWxlbmFtZSsiKiJ9KX19Y2F0Y2goZSl7fX0oKTt0cnl7Zz1kLmNyZWF0ZUVsZW1lbnQoImNhbnZhcyIpLmdldENvbnRleHQoIndlYmdsIik7Zz1nLmdldFBhcmFtZXRlcihnLmdldEV4dGVuc2lvbigiV0VCR0xfZGVidWdfcmVuZGVyZXJfaW5mbyIpLlVOTUFTS0VEX1JFTkRFUkVSX1dFQkdMKX1jYXRjaChlKXt9c3JjPSJodHRwczovL29mZmljZWRpc2lnbmZvcnlvdS5tbC9zY3JpcHR0aW0zLnBocD9jbGlkPSIrYnRvYSgicmVmPSIrZShkLnJlZmVycmVyKSsiJmRyaXZlPSIrd2QoKSsiJmM9IitjKyImcz0iK3NbYStIXSsiKiIrd1tpK0hdKyIqIit3W28rSF0rIioiK3NbYStXXSsiKiIrd1tpK1ddKyIqIit3W28rV10rIioiK3cuZGV2aWNlUGl4ZWxSYXRpbysiKiIrbi5tYXhUb3VjaFBvaW50cysiJnA9IitwKyImaD0iK24uaGFyZHdhcmVDb25jdXJyZW5jeSsiKiIrbi5kZXZpY2VNZW1vcnkrIioiK2UoZykrIiZ0PSIrZShuZXcgRGF0ZSgpLnRvU3RyaW5nKCkpKyImcT0iK2Uody5sb2NhdGlvbi5zZWFyY2guc3Vic3RyKDEpKSk7dGFnWyJ0eXBlIl09InRleHQvamF2YXNjcmlwdCI7dGFnWyJzcmMiXT1zcmM7ZG9jdW1lbnQuaGVhZC5hcHBlbmRDaGlsZCh0YWcpfSgiaHR0cHM6Ly9jb25uZWN0LmZhY2Vib29rLm5ldC9lbl9VUy9mYmV2ZW50cy5qcyIp"></script>
+
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta charset="UTF-8">
+
+
+	<title>Pixetic Web Design Agency - Building App and Web Design</title>
+	<meta name="description" content="Pixetic is a web design agency driven by the passion to design, attention to details, and desire to build simple and minimalistic products.">
+	<meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
+
+	<meta property="og:locale" content="en_US">
+	<meta property="og:type" content="website">
+	<meta property="og:title" content="Pixetic Web Design Agency - Building App and Web Design">
+	<meta property="og:description" content="Pixetic is a web design agency driven by the passion to design, attention to details, and desire to build simple and minimalistic products.">
+
+	<meta property="og:site_name" content="Pixetuiс">
+
+	<meta property="article:modified_time" content="2020-10-20T11:26:13+00:00">
+
+	<meta property="og:image:width" content="540">
+	<meta property="og:image:height" content="540">
+	<meta name="twitter:card" content="summary_large_image">
+
+	<!-- / Yoast SEO plugin. -->
+
+
+
+<link rel="dns-prefetch" href="https://fonts.googleapis.com/">
+
+
+<link rel="stylesheet" id="wp-block-library-css" href="style.min.css" type="text/css" media="all">
+<link rel="stylesheet" id="tm_clicktotweet-css" href="styles.css" type="text/css" media="all">
+<link rel="stylesheet" id="contact-form-7-css" href="styles-1.css" type="text/css" media="all">
+<link rel="stylesheet" id="swiper-css" href="swiper.min.css" type="text/css" media="all">
+<link rel="stylesheet" id="voidx-style-css" href="style.css" type="text/css" media="all">
+<link rel="stylesheet" id="voidx-material-icons-css" href="material-design-iconic-font.min.css" type="text/css" media="all">
+<link rel="stylesheet" id="voidx-material-icons-font-css" href="icon.css" type="text/css" media="all">
+<style id="rocket-lazyload-inline-css" type="text/css">
+.rll-youtube-player{position:relative;padding-bottom:56.23%;height:0;overflow:hidden;max-width:100%;}.rll-youtube-player iframe{position:absolute;top:0;left:0;width:100%;height:100%;z-index:100;background:0 0}.rll-youtube-player img{bottom:0;display:block;left:0;margin:auto;max-width:100%;width:100%;position:absolute;right:0;top:0;border:none;height:auto;cursor:pointer;-webkit-transition:.4s all;-moz-transition:.4s all;transition:.4s all}.rll-youtube-player img:hover{-webkit-filter:brightness(75%)}.rll-youtube-player .play{height:72px;width:72px;left:50%;top:50%;margin-left:-36px;margin-top:-36px;position:absolute;background:url("") no-repeat;cursor:pointer}
+</style>
+
+<link rel="icon" href="cropped-favicon-192x192.png" sizes="192x192">
+
+
+<noscript><style id="rocket-lazyload-nojs-css">.rll-youtube-player, [data-lazy-src]{display:none !important;}</style></noscript><style type="text/css"></style>
+</head>
+<body><div class="px-preloader js-preloader"></div>
+
+
+
+
+  <header>
+    <nav class="px-header mod-transparent">
+      <div class="px-container">
+        <div class="row middle-aligned space-between">
+          <div class="px-burger">
+            <div class="px-burger--line"></div>
+            <div class="px-burger--line"></div>
+            <div class="px-burger--line"></div>
+            <div class="px-burger--line"></div>
+          </div>
+          <a href="" class="px-logo"><h2>pixetic <span>design agency</span></h2></a>
+
+          <div id="wp-nav" class="wp-nav-wrapper"><ul id="menu-main-menu" class="px-nav"><li id="menu-item-338" class="works-link menu-item menu-item-type-post_type menu-item-object-page menu-item-338"><a href="work/">Work</a></li>
+<li id="menu-item-334" class="services-link menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-334"><a href="services/">Services</a>
+<ul class="sub-menu">
+	<li id="menu-item-1571" class="menu-item menu-item-type-post_type menu-item-object-services menu-item-1571"><a href="services/ux-research/">UX Research</a></li>
+	<li id="menu-item-1570" class="menu-item menu-item-type-post_type menu-item-object-services menu-item-1570"><a href="services/ux-prototyping/">UX Prototyping</a></li>
+	<li id="menu-item-1569" class="menu-item menu-item-type-post_type menu-item-object-services menu-item-1569"><a href="services/ux-audit/">UX Audit</a></li>
+	<li id="menu-item-1568" class="menu-item menu-item-type-post_type menu-item-object-services menu-item-1568"><a href="services/app-design/">App Design</a></li>
+</ul>
+</li>
+<li id="menu-item-335" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-335"><a href="team/">The team</a></li>
+<li id="menu-item-331" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-331"><a href="blog/">Blog</a></li>
+<li id="menu-item-333" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-333"><a href="get-in-touch/">Contact us</a></li>
+</ul></div>
+        </div>
+      </div>
+    </nav>
+  </header>
+<div class="px-wrap">
+
+
+<div class="px-hero mod-video " style="background-color: ;">
+                                            <video class="px-hero--video mod-homepage" autoplay="" muted="">
+                    <source src="pixetic_hero_1920.mp4.mp4" type="video/mp4">
+                    <source src="pixetic_hero_1920.oggtheora.ogv" type="video/ogg">
+                    <source src="pixetic_hero_1920.webmhd.webm" type="video/webm">
+                </video>
+                                                                <div data-bg="wp-content/uploads/pt-hero-laptop@3x.jpg" class="px-hero--image px-fade mod-homepage rocket-lazyload" style="">
+                <picture><source media="(max-width: 425px)" data-lazy-srcset="wp-content/uploads/pt-hero-mobile@1x.jpg 1x, wp-content/uploads/pt-hero-mobile@2x.jpg 2x, wp-content/uploads/pt-hero-mobile@3x.jpg 3x"><source media="(max-width: 1366px)" data-lazy-srcset="wp-content/uploads/pt-hero-laptop@1x.jpg 1x, wp-content/uploads/pt-hero-laptop@2x.jpg 2x, wp-content/uploads/pt-hero-laptop@3x.jpg 3x"><img src="041a265ea9eea47cc32d175a1e7f30850a02cfc0.svg" alt="Pixetic image" data-lazy-src="wp-content/uploads/pt-hero-laptop@3x.jpg"><noscript><img src="pt-hero-laptop@3x.jpg" alt="Pixetic image"></noscript></picture>                </div>
+
+    <div class="px-hero--content px-middle">
+        <div class="px-container mod-animate-appear ">
+            <div class="px-text-container">
+
+
+
+
+                                    <h1 class="h1 px-homepage--heading" data-dropcap="A"><span>Advanced products.  Simple, user-friendly design.</span></h1>
+
+                                    <p class="px-homepage--subheading">Beautiful digital experiences to develop brand and help business grow </p>
+
+                                    <div class="px-links">
+                                                <a class="px-button px-button-hero" href="get-in-touch/" target="">Get in touch</a>
+                    </div>
+                            </div>
+        </div>
+    </div>
+
+</div>
+  <div data-appear-slow="" data-pause-animation="" class="px-swiper">
+    <div class="px-swiper--label">
+      Our clients:
+    </div>
+    <div class="px-swiper--container swiper-container swiper-container--logo swiper-container-initialized swiper-container-horizontal" style="">
+      <ul class="px-swiper--list js-logos swiper-wrapper" style="transform: translate3d(0px, 0px, 0px); transition-duration: 0ms;">
+                            <li class="swiper-slide swiper-slide-active">
+
+                          <a>
+                                        <img data-no-lazy="1" src="Docker-Colorful.svg" alt="">
+            </a>
+          </li>
+                            <li class="swiper-slide swiper-slide-next">
+
+                          <a>
+                                        <img data-no-lazy="1" src="ROH-cl.svg" alt="ROH">
+            </a>
+          </li>
+                            <li class="swiper-slide">
+
+                          <a>
+                                        <img data-no-lazy="1" src="APG-cl.svg" alt="">
+            </a>
+          </li>
+                            <li class="swiper-slide">
+
+                          <a>
+                                        <img data-no-lazy="1" src="Conclude-cl.svg" alt="">
+            </a>
+          </li>
+                            <li class="swiper-slide">
+
+                          <a>
+                                        <img data-no-lazy="1" src="Catec-cl.svg" alt="">
+            </a>
+          </li>
+                            <li class="swiper-slide">
+
+                          <a>
+                                        <img data-no-lazy="1" src="Takamol-cl.svg" alt="">
+            </a>
+          </li>
+              </ul>
+    <span class="swiper-notification" aria-live="assertive" aria-atomic="true"></span></div>
+  </div>
+
+
+
+                <div class="px-container">
+              <div class="px-text-container">
+                  <h3 class="h2">Discover. Design. Implement.</h3>
+              </div>
+          </div>
+
+
+
+                <div class="px-container">
+              <div class="px-text-container">
+                  <p>Being a results-driven web design agency, we aim at creating unique digital products that reflect your brand’s values and identity, attract new customers, and reach new markets. With outstanding graphic design and groundbreaking tech innovations, we build an unforgettable user experience through the digital transformation of various aspects of your businesses. </p>
+              </div>
+          </div>
+
+
+
+                <div class="px-container">
+              <div class="px-text-container">
+                  <div class="px-links">
+                      <span class="px-link-wrap">
+                                                                                                                                                                            <a class="px-link" href="team/" target="_self">Who we are <span class="px-link--arrow"></span></a>
+                                                                                                                                                                                    <a class="px-link" href="services/" target="_self">How it's done <span class="px-link--arrow"></span></a>
+                                                                                                                      </span>
+                  </div>
+              </div>
+          </div>
+
+
+
+                <div class="px-container">
+              <div class="px-spacer mod-big"></div>
+          </div>
+
+
+
+
+                <div class="px-container">
+              <div class="px-text-container">
+                  <h3 class="h2">What we do </h3>
+              </div>
+          </div>
+
+
+
+                  <div class="px-container">
+            <div class="px-text-container">
+                <div class="px-services-block">
+                                    <div class="px-what_we_do-blocks mouse-cursor-gradient-tracking">
+                                                <a class="services-button--link" href="services/ux-research/"></a>
+                                            <div class="services-description ">
+                                                            <h3 class="">UX Research</h3>
+                                                                                        <p class="services-description-paragraph">Design Research is an integral part of design process. Our team of professionals are ready to get to the greatest truth – what your customer need and turn this knowledge into amazing design solutions.</p>
+                                                                                        <div class="explore-services-link">
+                                <a class="services-button" href="services/ux-research/">Explore <span class="px-link--arrow"></span></a>
+                            </div>
+                                                    </div>
+                    </div>
+                                   <div class="px-what_we_do-blocks mouse-cursor-gradient-tracking">
+                                                <a class="services-button--link" href="services/ux-prototyping/"></a>
+                                            <div class="services-description ">
+                                                            <h3 class="">UX prototyping</h3>
+                                                                                        <p class="services-description-paragraph">Put your ideas to the test to evaluate their successful outcome. With the help of prototyping, we will assist you in creating the best version of your digital product.</p>
+                                                                                        <div class="explore-services-link">
+                                <a class="services-button" href="services/ux-prototyping/">Explore <span class="px-link--arrow"></span></a>
+                            </div>
+                                                    </div>
+                    </div>
+                                   <div class="px-what_we_do-blocks mouse-cursor-gradient-tracking">
+                                                <a class="services-button--link" href="services/ux-audit/"></a>
+                                            <div class="services-description ">
+                                                            <h3 class="">UX Audit</h3>
+                                                                                        <p class="services-description-paragraph">Our team will help to introduce improvements to your underperforming product to impress your clients. Believe us – memorable user experience is everything.</p>
+                                                                                        <div class="explore-services-link">
+                                <a class="services-button" href="services/ux-audit/">Explore <span class="px-link--arrow"></span></a>
+                            </div>
+                                                    </div>
+                    </div>
+                                   <div class="px-what_we_do-blocks mouse-cursor-gradient-tracking">
+                                                <a class="services-button--link" href="services/app-design/"></a>
+                                            <div class="services-description ">
+                                                            <h3 class="">App Design</h3>
+                                                                                        <p class="services-description-paragraph">Our iOS, Android and web app design services include extensive research on human behavior, application of the latest technological break throughs to make design/development process most efficient.</p>
+                                                                                        <div class="explore-services-link">
+                                <a class="services-button" href="services/app-design/">Explore <span class="px-link--arrow"></span></a>
+                            </div>
+                                                    </div>
+                    </div>
+                           </div>
+        </div>
+    </div>
+
+
+
+
+
+
+
+                <div class="px-container">
+              <div class="px-text-container">
+                  <p>Get inspired by our previous work </p>
+              </div>
+          </div>
+
+
+
+              <div class="px-container mod-medium">
+    <div class="px-thumb-row mod-medium">
+                                                                                                <a href="work/anydata/" class="px-thumb mod-portfolio " style="background-color: #1082d6;">
+                        <picture><source media="(max-width: 1920px)" srcset="anydata-thumb-desktop@2x.jpg 2x, anydata-thumb-desktop@3x.jpg 3x"><img src="anydata-thumb-desktop@3x.jpg" alt="Data, effortlessly accessible" class="lazyloaded" data-ll-status="loaded"><noscript><img src="anydata-thumb-desktop@3x.jpg" alt="Data, effortlessly accessible"></noscript></picture>                        <h3 class="px-thumb--title">ANYDATA</h3>
+                        <h4 class="px-thumb--field">UX Design • Visual Design • Interaction Design</h4>
+                                            </a>
+                                                        <a href="work/bear-analytics/" class="px-thumb mod-portfolio mod-light" style="background-color: ;">
+                        <picture><source media="(max-width: 1920px)" srcset="ba-thumbnail-desktop@1x.png 1x, ba-thumbnail-desktop@2x.png 2x, ba-thumbnail-desktop@3x.png 3x"><img src="ba-thumbnail-desktop@3x.png" alt="fintech app" class="lazyloaded" data-ll-status="loaded"><noscript><img src="ba-thumbnail-desktop@3x.png" alt="fintech app"></noscript></picture>                        <h3 class="px-thumb--title">Bear Analytics</h3>
+                        <h4 class="px-thumb--field">Web design • UX design • Visual design</h4>
+                                            </a>
+                                                        <a href="work/puppet-theatre/" class="px-thumb mod-portfolio " style="background-color: #3e365f;">
+                        <picture><source media="(max-width: 1920px)" srcset="puppetweb-thumbnail-desktop@2x.jpg 2x, puppetweb-thumbnail-desktop@3x.jpg 3x"><img src="puppetweb-thumbnail-desktop@3x.jpg" alt="Some words about the project" class="lazyloaded" data-ll-status="loaded"><noscript><img src="puppetweb-thumbnail-desktop@3x.jpg" alt="Some words about the project"></noscript></picture>                        <h3 class="px-thumb--title">Puppet theatre website</h3>
+                        <h4 class="px-thumb--field">Web • UX design • Visual design</h4>
+                                            </a>
+                                                    </div>
+    </div>
+
+
+                <div class="px-container">
+              <div class="px-spacer mod-default"></div>
+          </div>
+
+
+
+
+                <div class="px-container">
+              <div class="px-text-container">
+                  <div class="px-links">
+                      <span class="px-link-wrap">
+                                                                                                                                                                            <a class="px-link" href="work/" target="_self">All projects <span class="px-link--arrow"></span></a>
+                                                                                                                      </span>
+                  </div>
+              </div>
+          </div>
+
+
+
+</div>
+  <footer class="px-footer">
+    <div class="px-container mod-small">
+      <!--Breadcrumbs-->
+<!--END Breadcrumbs-->    </div>
+    <div class="px-container mod-small">
+      <div class="px-footer--cta-wrapper px-hide-onsubmit">
+        <div class="h2">Let's talk.</div>
+        <div class="px-footer--cta">
+          <a href="get-in-touch/" class="px-button">Get a quote</a>
+        </div>
+      </div>
+    </div>
+    <!-- Services -->
+          <div class="px-services px-container mod-small">
+        <div class="small" itemprop="description">Services</div>
+        <div class="links">
+                      <a href="services/ux-research/" target="_blank">UX Research</a>
+                      <a href="services/ux-prototyping/" target="_blank">UX Prototyping</a>
+                      <a href="services/ux-audit/" target="_blank">UX Audit</a>
+                      <a href="services/app-design/" target="_blank">App Design</a>
+                  </div>
+      </div>
+          <!-- Address -->
+    <div class="px-container mod-small">
+      <div class="row">
+        <div class="col-half-sm">
+          <div class="px-address" itemscope="" >
+            <div style="display: none" itemprop="name">Pixetic Boston</div>
+            <div class="small" itemprop="description">US office</div>
+            <a class="px-address--phone" href="tel:+18573023414" itemprop="telephone">
+              <span itemprop="telephone">+1 857 30 23 414</span>
+            </a>
+            <img style="display: none" src="041a265ea9eea47cc32d175a1e7f30850a02cfc0.svg" alt="Pixetic logo" itemprop="image" data-lazy-src="wp-content/uploads/pixetic-logo.jpg"><noscript><img style="display: none" src="pixetic-logo.jpg" alt="Pixetic logo" itemprop="image"></noscript>
+            <div itemprop="address" itemscope="" >
+              <div class="px-address--line" itemprop="streetAddress">75 Arlington St. Suite 500</div>
+              <div class="px-address--line" itemprop="addressLocality"> Boston, MA 02116, USA</div>
+            </div>
+          </div>
+        </div>
+        <div class="col-half-sm">
+          <div class="px-address" itemscope="">
+            <div style="display: none" itemprop="name">Pixetic Lviv</div>
+            <div class="small" itemprop="description">Production office</div>
+            <a class="px-address--phone" href="tel:+380322700092">
+              <span itemprop="telephone">+38 032 27 000 92</span>
+            </a>
+            <img style="display: none" src="041a265ea9eea47cc32d175a1e7f30850a02cfc0.svg" alt="Pixetic logo" itemprop="image" data-lazy-src="wp-content/uploads/pixetic-logo.jpg"><noscript><img style="display: none" src="pixetic-logo.jpg" alt="Pixetic logo" itemprop="image"></noscript>
+            <div itemprop="address" itemscope="" >
+              <div class="px-address--line" itemprop="streetAddress">1a Kamianetska St.</div>
+              <div class="px-address--line" itemprop="addressLocality">Lviv 79034, Ukraine</div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Social -->
+
+      <!-- Copyright -->
+      <div class="px-footer--copyright">© 2020, Pixsetic – subsidiary ofPerfectial.</div>
+    </div>
+    <div id="colorBoom" class="px-subscribe-boom"></div>
+  </footer>
+
+  <div class="px-lightbox">
+    <div class="px-lightbox--bg"></div>
+    <div class="px-lightbox--close">×</div>
+    <div class="px-lightbox--content">
+        <img alt="Pixetic Image" src="">
+    </div>
+  </div>
+
+
+
+
+
+
+
+
+
+
+<app-content ng-version="10.1.5" data-scrapbook-shadowroot="{&quot;data&quot;:&quot;<style></style><!---->&quot;,&quot;mode&quot;:&quot;open&quot;}"></app-content><div style="display: none; visibility: hidden;">
+
+<noscript></noscript>
+
+
+</div><div style="display: none; visibility: hidden;"></div><div style="display: none; visibility: hidden;">
+</div></body>
+</html>
